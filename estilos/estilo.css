@@ -390,14 +390,34 @@ margin-left: 25%;
     grid-template-areas: 
       "encabezado encabezado encabezado"
       "lista productos productos"
-      "footer footer footer"; 
+      "piePagina piePagina piePagina"; 
   }
-  .footer { grid-area: piePagina; }
-  .productos { grid-area: productos; }
-  .encabezado { grid-area: encabezado; }
-  .lista { grid-area: lista; }
+  .piePagina { grid-area: piePagina; }
+  .productos {
+     grid-area: productos;
+        gap: 50px;
+    
+    }
+  .encabezado { 
+    grid-area: encabezado; 
+    display: flex;
+    justify-content: center;
+}
+  .lista { 
+    
+    grid-area: lista;
+    margin-top: 20px;
+    
+}
+    .lista a{
+        text-decoration: none;
+        }
 
-
+    .lista ul li{
+        margin-top: 50px;
+        font-size: 40px;
+        text-align: center;
+    }
 
 
   /*Casilla productos*/
@@ -413,6 +433,7 @@ margin-left: 25%;
     background-color: rgba(255, 255, 255, 0.76);
 border-style: double solid double solid ;
 border-width: 8px;
+margin-top: 50px;
 }
 
 
