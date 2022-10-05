@@ -375,23 +375,7 @@ margin-left: 25%;
 
 /* Pagina figuras articuladas */
 
-@media (max-width:768px){
 
-
-}
-
-
-
-.container {
-    display: grid; 
-    grid-template-columns: 0.7fr 1.2fr 1.2fr; 
-    grid-template-rows: 0.4fr 2.1fr 0.5fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "encabezado encabezado encabezado"
-      "lista productos productos"
-      "piePagina piePagina piePagina"; 
-  }
   .piePagina { grid-area: piePagina; }
   .productos {
      grid-area: productos;
@@ -427,10 +411,8 @@ margin-left: 25%;
 
 .casillaGeneralItem{
     display:flex;
-    width: 1000px;
-    height: 200px;
-    justify-content:space-between;
-    background-color: rgba(255, 255, 255, 0.76);
+   justify-content:space-between;
+    background-color: rgba(162, 153, 243, 0.76);
 border-style: double solid double solid ;
 border-width: 8px;
 margin-top: 50px;
@@ -481,3 +463,80 @@ margin-top: 50px;
     justify-content: center;
 }
 
+
+
+@media (max-width:768px){
+    #figuraArticulada{
+
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "encabezado"
+          "lista"
+           "productos"
+          "piePagina"; 
+      }
+
+      .productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .casillaGeneralItem{     
+        width: 300px;
+        height: auto;
+      }
+
+      .productoNombre{
+        font-size: 10px;
+      }
+
+      .productoPrecio{
+        font-size: 15px;
+      }
+
+      .estadoYconsulta{
+        font-size: 15px;
+      }
+      
+      .imagenItem{
+
+        height: 100px;
+        width: 80px;
+      }
+      
+      .imagenItem img{
+       
+        height: 100px;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        object-fit:cover;
+    } 
+
+}
+
+
+@media (min-width:769px){
+
+
+    #figuraArticulada {
+        display: grid; 
+        grid-template-columns: 0.7fr 1.2fr 1.2fr; 
+        grid-template-rows: 0.4fr 2.1fr 0.5fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "encabezado encabezado encabezado"
+          "lista productos productos"
+          "piePagina piePagina piePagina"; 
+      }
+
+      .casillaGeneralItem{
+        
+        width: 1000px;
+        height: 200px;
+      }
+}
