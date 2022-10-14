@@ -1,0 +1,192 @@
+@import "variables";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    /* box-sizing: border-box; Continene dentro las mismas dimensiones */
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+
+    ul {
+        list-style: none;
+
+        li a {
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+/* CLASES*/
+
+.tituloSubtitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FCFAFB;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+
+}
+
+#paginaPrincipal {
+    h1 {
+        font-size: 4em;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        line-height: 1.55em;
+        font-weight: 300;
+    }
+}
+
+
+/*Clases Index-buscador*/
+
+.buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+
+    input {
+        margin-top: 40px;
+        padding: 0 20px;
+        font-size: 18px;
+        color: black;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 30px;
+    }
+}
+
+/* Clases Index-Catalogo*/
+
+.imagenSecciones {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAF9F8;
+
+    img {
+
+        object-fit: cover;
+        /*Sirve para que no se distorsione la imagen */
+        justify-content: center;
+        box-shadow: 5px 5px 10px #002d72;
+    }
+
+    a {
+
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 20px;
+    }
+
+}
+
+/* Clases Index-UltimasNovedades*/
+
+.imagenNovedades {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);           
+    margin: 10px 10px 0px 0px;
+    img {
+        object-fit: cover;
+        /* Sirve para que no se distorsione la imagen */
+        justify-content: center;
+        border-radius: 10px;
+    
+    }
+    
+    
+     a {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+}
+
+ 
+/* Clases Index-Proximamente*/
+.imagenProximamente {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border-bottom: solid 3px black;
+    border-top: solid 3px black;
+    justify-content: center;
+    img {
+        object-fit: cover;
+        /* Sirve para que no se distorsione la imagen */
+        justify-content: center;
+        border-radius: 10px;
+    }
+    
+    
+     a {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    
+}
+
+
+ /*Clases figurasArticuladas*/
+
+     
+.piePagina {
+    grid-area: piePagina;
+}
+
+.productos {
+    grid-area: productos;
+    gap: 50px;
+
+}
+
+.encabezado {
+    grid-area: encabezado;
+    display: flex;
+   justify-content: center;
+  
+background-image:linear-gradient(rgba(55, 112, 255, 0.2),rgba(85, 133, 255, 0.2)), url(../multimedia/logoShfiguarts.jpg);
+background-position: center;
+background-repeat: no-repeat;
+
+;
+
+}
+
+.lista {
+
+    grid-area: lista;
+    position: fixed;
+    top: 170px;
+}
+
+.lista a {
+    text-decoration: none;
+}
+
+.lista ul li {
+    margin-top: 50px;
+    font-size: 40px;
+    text-align: center;
+}
