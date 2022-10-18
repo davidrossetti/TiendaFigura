@@ -1,0 +1,231 @@
+/*Clases figurasArticuladas*/
+#figuraArticulada {
+    background-color: $color-fondo-light;
+}
+
+.piePagina {
+    grid-area: piePagina;
+}
+
+.productos {
+    grid-area: productos;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-fondo-dark;
+}
+
+.encabezado {
+    grid-area: encabezado;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgba(55, 112, 255, 0.2), rgba(85, 133, 255, 0.2)), url(../multimedia/logoShfiguarts.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Casilla productos*/
+
+
+.casillaGeneralItem {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-principal;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1000px;
+    height: auto;
+}
+
+
+
+.imagenItem {
+    display: flex;
+    padding: 20px;
+    max-width: 300px;
+    max-height: auto;
+    align-items: center;
+    justify-content: center;
+    img {
+        max-width: 200px;
+        max-height: auto;
+    }
+}
+
+
+
+.descripcion {
+    
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    align-items: center;
+    justify-content:space-around;
+    max-width: 400px;
+    text-align: center;
+
+}
+
+.productoNombre {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Fredoka', sans-serif;
+    color: $color-fondo-light;
+
+}
+
+.productoPrecio {
+    color: $color-fondo-light;
+    display: flex;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: 'Fredoka', sans-serif;
+    align-self: flex-end;
+
+}
+
+.estadoYconsulta {
+    background-color:$color-secundario-dark;
+    color: $color-fondo-light;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lista {
+
+    grid-area: lista;
+    background-color:$color-fondo-light;
+
+    a {
+        text-decoration: none;
+        color:$color-secundario-dark;
+        
+    }
+
+    ul {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        list-style: none;
+        :hover{
+            background-color: $color-principal;
+           
+        }
+        :active{
+            background-color: $color-secundario-light;
+            color: $color-fondo-light;
+        }
+
+        li {
+            margin-top: 50px;
+            font-size: 40px;
+            text-align: center;
+            border: 3px solid;
+            padding: 12px;
+            border-style: none solid  none solid ;
+           
+        }
+    }
+}
+
+
+/* RESPONSIVE MOBILE*/
+@media (max-width:768px) {
+
+
+
+
+
+    /*  RESPONSIVE MOBILE PAGINA FIGURA ARTICULADA */
+
+    #figuraArticulada {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "encabezado"
+            "lista"
+            "productos"
+            "piePagina";
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .casillaGeneralItem {
+        width: 400px;
+        height: auto;
+    }
+
+    .productoNombre {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    .productoPrecio {
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+    .estadoYconsulta {
+        font-size: 15px;
+    }
+
+    .imagenItem {
+
+        height: 100px;
+        width: 80px;
+        img {
+
+            height: 80px;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+        }
+    }
+
+     
+
+
+
+}
+
+
+/* RESPONSIVE DESKTOP*/
+@media (min-width:769px) {
+
+
+
+    /*  RESPONSIVE DESKTOP PAGINA FIGURA ARTICULADA */
+
+    #figuraArticulada {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr 1.2fr;
+        grid-template-rows: 0.4fr 0.4fr 2.1fr 0.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "encabezado encabezado encabezado"
+            "lista lista lista"
+            "productos productos productos"
+            "piePagina piePagina piePagina";
+    }
+
+    .casillaGeneralItem {
+
+        width: 1000px;
+        height: 200px;
+    }
+
+
+}

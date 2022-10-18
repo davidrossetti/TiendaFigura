@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+
+    ul {
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* RESPONSIVE MOBILE*/
+@media (max-width:768px) {
+    footer {
+        flex-direction: column;
+        background-color: #002d72;
+        color: #FCFAFB;
+        font-size: large;
+        text-align: center;
+        list-style: none;
+    }
+}
+
+/* RESPONSIVE DESKTOP*/
+@media (min-width:769px) {
+    footer {
+        background-color: $color-secundario-dark;
+        color: $color-fondo-light;
+        gap: 50px;
+    }
+}
