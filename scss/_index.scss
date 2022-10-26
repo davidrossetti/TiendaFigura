@@ -1,5 +1,8 @@
 /* CLASES*/
 @import "variables";
+
+
+
 .tituloSubtitulo {
     display: flex;
     flex-direction: column;
@@ -11,14 +14,27 @@
 #paginaPrincipal {
     h1 {
         font-size: 4em;
-        font-weight: 600;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: 2em;
+        line-height: 1.55em;
+        font-weight: 500;
     }
 
     h3 {
-        font-size: 1.3em;
-        line-height: 1.55em;
-        font-weight: 300;
+        font-size: 1.4em;
+        line-height: 2em;
+        font-weight: 700;
     }
+    h4{
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: 600;
+    }
+
+    
 }
 
 /*Clases Index-buscador*/
@@ -45,7 +61,7 @@
 .imagenSecciones {
     display: flex;
     flex-direction: column;
-    background-color:#414852;
+    background-color: #414852;
 
     img {
         object-fit: cover;
@@ -65,6 +81,40 @@
         padding: 20px;
         color: $color-fondo-light;
     }
+
+}
+
+.imagenSecciones1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #414852;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+
+        img {
+            object-fit: cover;
+            /*Sirve para que no se distorsione la imagen */
+            justify-content: center;
+        }
+
+        h3 {
+            display: flex;
+            font-size: 120px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bolder;
+            color: $color-fondo-light;
+        }
+
+
+    }
+
+
 
 }
 
@@ -91,6 +141,34 @@
         justify-content: center;
         text-decoration: none;
     }
+
+}
+
+.imagenNovedades1 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 10px 0px 0px;
+
+    a {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        img {
+            object-fit: cover;
+            /* Sirve para que no se distorsione la imagen */
+            justify-content: center;
+            border-radius: 10px;
+            
+        }
+    }
+
+
+
+
 
 }
 
@@ -157,13 +235,15 @@
         max-width: 850px;
         border: solid 3px black;
         margin-top: 20px;
-
+        
         img {
+           
             height: 300px;
             width: 150px;
         }
 
         a {
+            
             height: 100px;
             /*alto */
             max-width: 150px;
@@ -261,38 +341,98 @@
     .w-100 {
         /* Fuerza a poner la imagen en carusel al mismo tamaño */
         width: 100% !important;
+        border: 20px solid black;
+        padding: 21px;
         height: 60vh;
+
     }
 
+    .carousel-item {
+
+        background-color: rgb(175, 25, 25) !important;
+    }
 
     /* Propiedades Index-Catalogo */
     .imagenSecciones {
-
-
+        overflow: hidden;
         height: 600px;
         max-width: 350px;
         border-bottom: solid 3px black;
-
         padding: 30px;
         border-top: solid 3px black;
+        cursor: default;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        transition: all 400ms ease;
+
+        img {
+
+            height: 400px;
+            width: 250px;
+            transition: all 400ms ease;
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            /*alto */
+            max-width: 250px;
+            /* ancho */
+
+        }
+
+
+
+        :hover {
+            transform: translateY(-18%);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+            color: #ff03b3;
+            background-color: white;
+
+        }
     }
 
-    .imagenSecciones img {
-        height: 400px;
-        width: 250px;
+    .imagenSecciones1 {
+        overflow: hidden;
+        height: 600px;
+        max-width: 290px;
+        border-bottom: solid 3px black;
+        padding: 30px;
+        border-top: solid 3px black;
+        cursor: default;
+        transition: all 400ms ease;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            transition: all 400ms ease;
+
+            img {
+                height: 350px;
+                width: 230px;
+            }
+
+            H3 {
+                padding: 73px;
+                transition: all 400ms ease;
+
+
+            }
+
+            &:hover {
+                transform: translateY(-5%);
+                background-color: rgb(255, 255, 255);
+
+                H3 {
+                    color: black;
+                }
+            }
+        }
+
 
     }
-
-    .imagenSecciones a {
-        height: 200px;
-        /*alto */
-        max-width: 250px;
-        /* ancho */
-    }
-
 
     /* Propiedades Index-UltimasNovedades*/
-
     .imagenNovedades {
         max-width: 300px;
         height: 300px;
@@ -322,6 +462,79 @@
 
 
 
+    }
+
+    .imagenNovedades1 {
+
+        max-width: 350px;
+        height: 350px;
+        padding: 50px;
+        border-bottom: solid 3px black;
+        border-top: solid 3px black;
+        border-radius: 50%;
+        transition: all 1200ms ease;
+        
+        a {
+            display: flex;
+            flex-direction: column;
+            
+            img {
+                height: 200px;
+                width: 200px;
+                border: 2px solid red;
+                position: relative;
+                top: -20px;
+                
+            }
+        }
+
+        h3 {
+            
+            font-size: 10px;
+            flex-grow: 1;
+            height: 100px;
+            width: auto;
+            background-color: rgb(123, 121, 121);
+            color: aliceblue;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            position: relative;
+            top: -80px;
+            transition: all 800ms ease;
+
+        }
+
+        h1{
+            position: relative;
+            top: -226px;
+            visibility:hidden;
+            opacity: 0;
+            transition: all 1200ms ease;
+        }
+
+        &:hover {
+            h1 {
+                opacity: 2;
+                visibility: visible;
+                box-shadow: 0px 25px 40px 2px rgba(0, 0, 0, 0.7);
+            }
+            h3{
+                opacity: 0;
+                visibility:hidden;
+            
+            }
+           
+        }
+
+        &:hover{
+            background-color:rgba(26, 26, 26, 0.178);
+
+            img{
+                border: 2px solid rgb(0, 0, 0);
+                box-shadow: 0px 25px 40px 2px rgba(0, 0, 0, 0.7);
+                opacity: 0.2;
+            }
+        }
     }
 
     /* Propiedades Index-Proximamente*/
