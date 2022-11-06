@@ -3,6 +3,8 @@
 
 
 
+
+
 .tituloSubtitulo {
     display: flex;
     flex-direction: column;
@@ -28,13 +30,14 @@
         line-height: 2em;
         font-weight: 700;
     }
-    h4{
+
+    h4 {
         font-size: 1em;
         line-height: 1em;
         font-weight: 600;
     }
 
-    
+
 }
 
 /*Clases Index-buscador*/
@@ -58,33 +61,8 @@
 
 /* Clases Index-Catalogo*/
 
+
 .imagenSecciones {
-    display: flex;
-    flex-direction: column;
-    background-color: #414852;
-
-    img {
-        object-fit: cover;
-        /*Sirve para que no se distorsione la imagen */
-        justify-content: center;
-        box-shadow: 5px 5px 10px #002d72;
-    }
-
-    a {
-        display: flex;
-        font-size: 20px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-weight: bolder;
-        padding: 20px;
-        color: $color-fondo-light;
-    }
-
-}
-
-.imagenSecciones1 {
     display: flex;
     flex-direction: column;
     background-color: #414852;
@@ -120,31 +98,9 @@
 
 /* Clases Index-UltimasNovedades*/
 
+
+
 .imagenNovedades {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    margin: 10px 10px 0px 0px;
-
-    img {
-        object-fit: cover;
-        /* Sirve para que no se distorsione la imagen */
-        justify-content: center;
-        border-radius: 10px;
-    }
-
-
-    a {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-}
-
-.imagenNovedades1 {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
@@ -162,7 +118,7 @@
             /* Sirve para que no se distorsione la imagen */
             justify-content: center;
             border-radius: 10px;
-            
+
         }
     }
 
@@ -174,32 +130,36 @@
 
 
 /* Clases Index-Proximamente*/
+
 .imagenProximamente {
     display: flex;
     background-color: white;
     flex-direction: column;
-    border-bottom: solid 3px black;
-    border-top: solid 3px black;
+    border-bottom: solid 5px black;
+    border-top: solid 5px black;
     justify-content: center;
-
-    img {
-        object-fit: cover;
-        /* Sirve para que no se distorsione la imagen */
-        justify-content: center;
-        border-radius: 10px;
-    }
-
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 
     a {
-        display: flex;
+
         text-align: center;
         align-items: center;
         justify-content: center;
         text-decoration: none;
+       
+
+        img {
+            object-fit: cover;
+            /* Sirve para que no se distorsione la imagen */
+            justify-content: center;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+
     }
 
 }
-
 
 /* RESPONSIVE MOBILE*/
 @media (max-width:768px) {
@@ -230,28 +190,7 @@
     }
 
 
-    .imagenSecciones {
-        height: 350px;
-        max-width: 850px;
-        border: solid 3px black;
-        margin-top: 20px;
-        
-        img {
-           
-            height: 300px;
-            width: 150px;
-        }
-
-        a {
-            
-            height: 100px;
-            /*alto */
-            max-width: 150px;
-            /*ancho */
-
-        }
-    }
-
+    
 
 
     /* RESPONSIVE MOBILE Propiedades Index-UltimasNovedades*/
@@ -287,6 +226,7 @@
 
     /* RESPONSIVE MOBILE Propiedades Index-Proximamente*/
 
+    
     .imagenProximamente {
         background-color: rgba(253, 14, 14, 0.274);
         max-width: 200px;
@@ -353,46 +293,9 @@
     }
 
     /* Propiedades Index-Catalogo */
+   
+
     .imagenSecciones {
-        overflow: hidden;
-        height: 600px;
-        max-width: 350px;
-        border-bottom: solid 3px black;
-        padding: 30px;
-        border-top: solid 3px black;
-        cursor: default;
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-        transition: all 400ms ease;
-
-        img {
-
-            height: 400px;
-            width: 250px;
-            transition: all 400ms ease;
-        }
-
-        a {
-            display: flex;
-            flex-direction: column;
-            height: 200px;
-            /*alto */
-            max-width: 250px;
-            /* ancho */
-
-        }
-
-
-
-        :hover {
-            transform: translateY(-18%);
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-            color: #ff03b3;
-            background-color: white;
-
-        }
-    }
-
-    .imagenSecciones1 {
         overflow: hidden;
         height: 600px;
         max-width: 290px;
@@ -433,38 +336,9 @@
     }
 
     /* Propiedades Index-UltimasNovedades*/
+  
+
     .imagenNovedades {
-        max-width: 300px;
-        height: 300px;
-        padding: 20px;
-        border-bottom: solid 3px black;
-        border-top: solid 3px black;
-
-        img {
-            height: 200px;
-            width: 200px;
-            border: 2px solid red;
-
-        }
-
-
-        a {
-            font-size: 20px;
-            flex-grow: 1;
-            height: 250px;
-            width: auto;
-            background-color: rgb(123, 121, 121);
-            color: aliceblue;
-            border: 1px solid rgb(255, 255, 255);
-            border-radius: 10px;
-            margin-top: 2px;
-        }
-
-
-
-    }
-
-    .imagenNovedades1 {
 
         max-width: 350px;
         height: 350px;
@@ -473,23 +347,23 @@
         border-top: solid 3px black;
         border-radius: 50%;
         transition: all 1200ms ease;
-        
+
         a {
             display: flex;
             flex-direction: column;
-            
+
             img {
                 height: 200px;
                 width: 200px;
                 border: 2px solid red;
                 position: relative;
                 top: -20px;
-                
+
             }
         }
 
         h3 {
-            
+
             font-size: 10px;
             flex-grow: 1;
             height: 100px;
@@ -504,10 +378,10 @@
 
         }
 
-        h1{
+        h1 {
             position: relative;
             top: -226px;
-            visibility:hidden;
+            visibility: hidden;
             opacity: 0;
             transition: all 1200ms ease;
         }
@@ -518,18 +392,19 @@
                 visibility: visible;
                 box-shadow: 0px 25px 40px 2px rgba(0, 0, 0, 0.7);
             }
-            h3{
+
+            h3 {
                 opacity: 0;
-                visibility:hidden;
-            
+                visibility: hidden;
+
             }
-           
+
         }
 
-        &:hover{
-            background-color:rgba(26, 26, 26, 0.178);
+        &:hover {
+            background-color: rgba(26, 26, 26, 0.178);
 
-            img{
+            img {
                 border: 2px solid rgb(0, 0, 0);
                 box-shadow: 0px 25px 40px 2px rgba(0, 0, 0, 0.7);
                 opacity: 0.2;
@@ -539,32 +414,46 @@
 
     /* Propiedades Index-Proximamente*/
 
-    .imagenProximamente {
-        background-color: rgba(255, 255, 255, 0.87);
-        max-width: 300px;
-        height: 300px;
-        padding: 20px;
-        margin: 40px 10px 10px 40px;
+    
 
-        img {
-            height: 200px;
-            width: 200px;
-            object-fit: cover;
-            /* Sirve para que no se distorsione la imagen */
-            justify-content: center;
+    .imagenProximamente {
+        display: flex;
+        justify-content: start;
+        max-width: 260px;
+        max-height: 310px;
+        h2{
+            visibility: hidden;
         }
 
         a {
-            font-size: 20px;
+
+            background-color: rgba(255, 255, 255, 0.87);
+            display: flex;
+            flex-direction: column;
+            margin: 20px 30px 10px 40px;
+            font-size: 10px;
             flex-grow: 1;
-            height: 250px;
-            width: auto;
             color: white;
             background: #002d72;
             border: solid #0096c8 2px;
+            border-radius: 20px;
+
+            img {
+                display: flex;
+                height: 150px;
+                width: 150px;
+                padding: 10px;
+                object-fit: cover;
+                /* Sirve para que no se distorsione la imagen */
+
+            }
+
+
         }
+
+
     }
 
-
-
 }
+
+

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/davidrossetti/TiendaFigura/issues"
   },
-  "homepage": "https://github.com/davidrossetti/TiendaFigura#readme"
+  "homepage": "https://github.com/davidrossetti/TiendaFigura#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
 }
