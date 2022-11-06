@@ -2,15 +2,33 @@
 @import "variables";
 @import "index";
 @import "listaArticulos";
+@import "preguntasFre";
 @import"footer";
-
+@import"barraNavegacion";
+@import "contacto";
 * {
     padding: 0px;
     margin: 0px;
-    /* box-sizing: border-box; Continene dentro las mismas dimensiones */
+     box-sizing: border-box;// Continene dentro las mismas dimensiones */
+
 }
 
+html{
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-top: 1%;
+   margin-bottom: 2%;
+   background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/fondoPagina.jpg);
 
+   
+}
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:$color-fondo-light;
+    border-radius: 12px;
+}
 
 

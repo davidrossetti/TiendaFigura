@@ -11,21 +11,25 @@
 #paginaPrincipal h1 {
   font-size: 4em;
   font-weight: 900;
+  cursor: default;
 }
 #paginaPrincipal h2 {
   font-size: 2em;
   line-height: 1.55em;
   font-weight: 500;
+  cursor: default;
 }
 #paginaPrincipal h3 {
   font-size: 1.4em;
   line-height: 2em;
   font-weight: 700;
+  cursor: default;
 }
 #paginaPrincipal h4 {
   font-size: 1em;
   line-height: 1em;
   font-weight: 600;
+  cursor: default;
 }
 
 /*Clases Index-buscador*/
@@ -49,7 +53,7 @@
 .imagenSecciones {
   display: flex;
   flex-direction: column;
-  background-color: #414852;
+  background-color: #9EABB5;
 }
 .imagenSecciones a {
   display: flex;
@@ -60,6 +64,8 @@
   object-fit: cover;
   /*Sirve para que no se distorsione la imagen */
   justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #FAF9F8;
 }
 .imagenSecciones a h3 {
   display: flex;
@@ -76,7 +82,7 @@
 .imagenNovedades {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
+  background-color: #FAF9F8;
   margin: 10px 10px 0px 0px;
 }
 .imagenNovedades a {
@@ -96,15 +102,19 @@
 /* Clases Index-Proximamente*/
 .imagenProximamente {
   display: flex;
-  background-color: white;
+  background-color: #FAF9F8;
   flex-direction: column;
-  border-bottom: solid 5px black;
-  border-top: solid 5px black;
+  border-bottom: solid 5px #8895A2;
+  border-top: solid 5px #8895A2;
   justify-content: center;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  margin-bottom: 5%;
+  padding: 10px;
+  margin: 30px;
 }
 .imagenProximamente a {
+  padding: 15px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -115,15 +125,15 @@
   /* Sirve para que no se distorsione la imagen */
   justify-content: center;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: #FAF9F8;
 }
 
 /* RESPONSIVE MOBILE*/
 @media (max-width: 768px) {
   /* RESPONSIVE MOBILE Index BOOTSTRAP */
   #paginaPrincipal {
-    --bs-body-bg: #4D668E;
-    border: 30px solid white;
+    --bs-body-bg: $color-fondo-dark;
+    border: 30px solid #FAF9F8;
     margin: auto;
   }
   #paginaPrincipal header {
@@ -140,20 +150,20 @@
   }
   /* RESPONSIVE MOBILE Propiedades Index-UltimasNovedades*/
   .imagenNovedades {
-    max-width: 300px;
-    height: 350px;
-    padding: 45px;
+    max-width: 200px;
+    height: 150px;
+    padding: 15px;
     border: solid 3px rgb(179, 176, 176);
   }
   .imagenNovedades img {
-    height: 200px;
-    width: 200px;
+    height: 50px;
+    width: 50px;
     border: 2px solid rgb(0, 0, 0);
   }
   .imagenNovedades a {
     font-size: 20px;
     flex-grow: 1;
-    height: 250px;
+    height: 140px;
     width: auto;
     background-color: rgb(123, 121, 121);
     color: aliceblue;
@@ -189,6 +199,7 @@
   /****** INDEX BOOTSTRAP*****/
   #paginaPrincipal {
     background-color: #002D72 !important;
+    border-radius: 12px;
   }
   #paginaPrincipal section {
     /*Se usa ID para central todos los elementos SOLO en la pagina principal*/
@@ -203,22 +214,20 @@
   }
   .w-100 {
     /* Fuerza a poner la imagen en carusel al mismo tamaño */
-    width: 100% !important;
-    border: 20px solid black;
-    padding: 21px;
-    height: 60vh;
+    width: 100vw !important;
+    height: 50vh;
   }
   .carousel-item {
-    background-color: rgb(175, 25, 25) !important;
+    border: #FAF9F8 solid 3px;
   }
   /* Propiedades Index-Catalogo */
   .imagenSecciones {
     overflow: hidden;
     height: 600px;
     max-width: 290px;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #FAF9F8;
     padding: 30px;
-    border-top: solid 3px black;
+    border-top: solid 3px #FAF9F8;
     cursor: default;
     transition: all 400ms ease;
   }
@@ -230,25 +239,26 @@
   .imagenSecciones a img {
     height: 350px;
     width: 230px;
+    box-shadow: 7px 14px 20px 3px #8895A2;
   }
   .imagenSecciones a H3 {
-    padding: 73px;
+    padding: 50px;
     transition: all 400ms ease;
   }
   .imagenSecciones a:hover {
     transform: translateY(-5%);
-    background-color: rgb(255, 255, 255);
+    background-color: #FAF9F8;
   }
   .imagenSecciones a:hover H3 {
-    color: black;
+    color: #002D72;
   }
   /* Propiedades Index-UltimasNovedades*/
   .imagenNovedades {
     max-width: 350px;
     height: 350px;
     padding: 50px;
-    border-bottom: solid 3px black;
-    border-top: solid 3px black;
+    border-bottom: solid 3px #FAF9F8;
+    border-top: solid 3px #8895A2;
     border-radius: 50%;
     transition: all 1200ms ease;
   }
@@ -259,24 +269,24 @@
   .imagenNovedades a img {
     height: 200px;
     width: 200px;
-    border: 2px solid red;
+    border: 2px solid #9EABB5;
     position: relative;
     top: -20px;
   }
   .imagenNovedades h3 {
     font-size: 10px;
     flex-grow: 1;
-    height: 100px;
+    height: 110px;
     width: auto;
-    background-color: rgb(123, 121, 121);
-    color: aliceblue;
-    border: 1px solid rgb(255, 255, 255);
+    background-color: #8895A2;
+    color: #FAF9F8;
     border-radius: 10px;
     position: relative;
     top: -80px;
     transition: all 800ms ease;
   }
   .imagenNovedades h1 {
+    color: #FAF9F8;
     position: relative;
     top: -226px;
     visibility: hidden;
@@ -284,16 +294,16 @@
     transition: all 1200ms ease;
   }
   .imagenNovedades:hover h1 {
-    opacity: 2;
+    opacity: 1;
     visibility: visible;
-    box-shadow: 0px 25px 40px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: rgba(234, 231, 231, 0.45) 0px 25px 20px -20px;
   }
   .imagenNovedades:hover h3 {
     opacity: 0;
     visibility: hidden;
   }
   .imagenNovedades:hover {
-    background-color: rgba(26, 26, 26, 0.178);
+    background-color: rgba(166, 177, 195, 0.178);
   }
   .imagenNovedades:hover img {
     border: 2px solid rgb(0, 0, 0);
@@ -311,15 +321,15 @@
     visibility: hidden;
   }
   .imagenProximamente a {
-    background-color: rgba(255, 255, 255, 0.87);
+    background-color: rgba(166, 177, 195, 0.87);
     display: flex;
     flex-direction: column;
     margin: 20px 30px 10px 40px;
     font-size: 10px;
     flex-grow: 1;
-    color: white;
-    background: #002d72;
-    border: solid #0096c8 2px;
+    color: #FAF9F8;
+    background: #002D72;
+    border: solid #FAF9F8 2px;
     border-radius: 20px;
   }
   .imagenProximamente a img {
@@ -368,6 +378,12 @@
   margin-bottom: 50px;
   width: 800px;
   height: 150px;
+  transition: all 400ms ease;
+}
+.casillaGeneralItem:hover {
+  background-color: black;
+  width: 900px;
+  height: 160px;
 }
 
 .imagenItem {
@@ -419,36 +435,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.lista {
-  grid-area: lista;
-  background-color: #FAF9F8;
-}
-.lista a {
-  text-decoration: none;
-  color: #8895A2;
-}
-.lista ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style: none;
-}
-.lista ul :hover {
-  background-color: #A6B1C3;
-}
-.lista ul :active {
-  background-color: #9EABB5;
-  color: #FAF9F8;
-}
-.lista ul li {
-  font-size: 30px;
-  text-align: center;
-  border: 2px solid;
-  margin: auto;
-  padding: 12px;
-  border-style: none solid none solid;
 }
 
 /* RESPONSIVE MOBILE*/
@@ -504,15 +490,77 @@
     grid-template-areas: "encabezado encabezado encabezado" "lista lista lista" "productos productos productos" "piePagina piePagina piePagina";
   }
 }
+#paginaPreguntasFrec {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  padding: 5%;
+  text-align: center;
+  background-color: #FAF9F8;
+  border: 3px solid;
+}
+#paginaPreguntasFrec h1 {
+  margin: 20px;
+  font-size: 70px;
+  color: #8895A2;
+  text-transform: uppercase;
+}
+#paginaPreguntasFrec ol {
+  margin-bottom: 2%;
+}
+#paginaPreguntasFrec ol li {
+  font-weight: bold;
+  list-style: none;
+  margin: 2%;
+  font-size: 3rem;
+  color: #A6B1C3;
+}
+
 footer {
+  padding: 1%;
   display: flex;
   justify-content: space-around;
+  width: 80vw;
+  height: 35vh;
+  margin-bottom: 1%;
+  border-radius: 50px;
+  position: relative;
+  bottom: 0%;
 }
 footer ul {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+footer ul iframe {
+  border: solid #FAF9F8;
+}
+footer ul h3 {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+footer ul li {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin: 2px;
 }
 footer ul li a {
   text-decoration: none;
+  text-transform: none;
+  color: #8895A2;
+  background-color: #FAF9F8;
+  padding: 15px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  transition: all 120ms;
+}
+footer ul li a:hover {
+  color: #FAF9F8;
+  background-color: #9EABB5;
 }
 
 /* RESPONSIVE MOBILE*/
@@ -534,10 +582,117 @@ footer ul li a {
     gap: 50px;
   }
 }
+.lista {
+  background-color: #002D72;
+  height: 80px;
+  width: 80vw;
+  position: fixed;
+  top: 0;
+  left: 50px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 1200ms ease;
+}
+.lista ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  transition: all 1000ms ease;
+}
+.lista ul :hover {
+  background-color: #A6B1C3;
+}
+.lista ul :active {
+  background-color: #9EABB5;
+  color: #FAF9F8;
+}
+.lista ul li {
+  transition: all 1000ms ease;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid #8895A2;
+  margin: auto;
+  padding: 12px;
+  border-style: none solid none solid;
+}
+.lista ul li a {
+  text-decoration: none;
+  color: #FAF9F8;
+}
+
+.logo {
+  padding-left: 40px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #FAF9F8;
+  text-transform: uppercase;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+
+#paginaContacto {
+  display: flex;
+  flex-direction: column;
+}
+#paginaContacto .formulario {
+  background: #9EABB5;
+  min-height: 50vh;
+  min-width: 60vw;
+  margin: 0px 50px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 150px;
+  align-items: center;
+  border-radius: 15px;
+}
+#paginaContacto .formulario h1 {
+  color: #FAF9F8;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+#paginaContacto .formulario input {
+  text-transform: uppercase;
+  margin: 1%;
+  width: 20vw;
+  text-align: center;
+  border-radius: 20px;
+  border: #8895A2 solid;
+  background: #FAF9F8;
+  padding: 5px;
+}
+#paginaContacto .formulario label {
+  color: #FAF9F8;
+  text-transform: uppercase;
+  margin: 20px;
+}
+#paginaContacto .formulario textarea {
+  width: 1000px;
+  height: 110px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
-  /* box-sizing: border-box; Continene dentro las mismas dimensiones */
+  box-sizing: border-box;
+}
+
+html {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/fondoPagina.jpg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAF9F8;
+  border-radius: 12px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

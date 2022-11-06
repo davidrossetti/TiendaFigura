@@ -17,24 +17,32 @@
     h1 {
         font-size: 4em;
         font-weight: 900;
+        cursor: default;
+
     }
 
     h2 {
         font-size: 2em;
         line-height: 1.55em;
         font-weight: 500;
+        cursor: default;
+
     }
 
     h3 {
         font-size: 1.4em;
         line-height: 2em;
         font-weight: 700;
+        cursor: default;
+
     }
 
     h4 {
         font-size: 1em;
         line-height: 1em;
         font-weight: 600;
+        cursor: default;
+
     }
 
 
@@ -65,17 +73,19 @@
 .imagenSecciones {
     display: flex;
     flex-direction: column;
-    background-color: #414852;
-
+    background-color: $color-secundario-light;
     a {
         display: flex;
         flex-direction: column;
         text-decoration: none;
+        
 
         img {
             object-fit: cover;
             /*Sirve para que no se distorsione la imagen */
             justify-content: center;
+            border-radius: 5px;
+            border: 1px solid $color-fondo-light;
         }
 
         h3 {
@@ -103,7 +113,7 @@
 .imagenNovedades {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background-color: $color-fondo-light;
     margin: 10px 10px 0px 0px;
 
     a {
@@ -133,16 +143,18 @@
 
 .imagenProximamente {
     display: flex;
-    background-color: white;
+    background-color:$color-fondo-light;
     flex-direction: column;
-    border-bottom: solid 5px black;
-    border-top: solid 5px black;
-    justify-content: center;
+    border-bottom: solid 5px $color-secundario-dark;
+    border-top: solid 5px $color-secundario-dark;
+    justify-content:center;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-
+    margin-bottom: 5%;
+    padding: 10px;
+    margin: 30px;
     a {
-
+        padding: 15px;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -154,7 +166,7 @@
             /* Sirve para que no se distorsione la imagen */
             justify-content: center;
             border-radius: 10px;
-            background-color: aliceblue;
+            background-color: $color-fondo-light;
         }
 
     }
@@ -166,8 +178,8 @@
 
     /* RESPONSIVE MOBILE Index BOOTSTRAP */
     #paginaPrincipal {
-        --bs-body-bg: #4D668E;
-        border: 30px solid white;
+        --bs-body-bg: $color-fondo-dark;
+        border: 30px solid $color-fondo-light;
         margin: auto;
 
         header {
@@ -196,21 +208,21 @@
     /* RESPONSIVE MOBILE Propiedades Index-UltimasNovedades*/
 
     .imagenNovedades {
-        max-width: 300px;
-        height: 350px;
-        padding: 45px;
+        max-width: 200px;
+        height: 150px;
+        padding: 15px;
         border: solid 3px rgb(179, 176, 176);
 
         img {
-            height: 200px;
-            width: 200px;
+            height: 50px;
+            width: 50px;
             border: 2px solid rgb(0, 0, 0);
         }
 
         a {
             font-size: 20px;
             flex-grow: 1;
-            height: 250px;
+            height: 140px;
             width: auto;
             background-color: rgb(123, 121, 121);
             color: aliceblue;
@@ -261,6 +273,7 @@
 
     #paginaPrincipal {
         background-color: $color-fondo-dark !important;
+        border-radius: 12px;
     }
 
     #paginaPrincipal section {
@@ -280,16 +293,14 @@
 
     .w-100 {
         /* Fuerza a poner la imagen en carusel al mismo tamaño */
-        width: 100% !important;
-        border: 20px solid black;
-        padding: 21px;
-        height: 60vh;
+        width: 100vw !important;
+        height: 50vh;
 
     }
 
     .carousel-item {
-
-        background-color: rgb(175, 25, 25) !important;
+        border: $color-fondo-light solid 3px;
+        
     }
 
     /* Propiedades Index-Catalogo */
@@ -299,9 +310,9 @@
         overflow: hidden;
         height: 600px;
         max-width: 290px;
-        border-bottom: solid 3px black;
+        border-bottom: solid 3px $color-fondo-light;
         padding: 30px;
-        border-top: solid 3px black;
+        border-top: solid 3px $color-fondo-light;
         cursor: default;
         transition: all 400ms ease;
 
@@ -309,25 +320,26 @@
             display: flex;
             flex-direction: column;
             transition: all 400ms ease;
+            
 
             img {
                 height: 350px;
                 width: 230px;
+                box-shadow:7px 14px 20px 3px $color-secundario-dark;
             }
 
             H3 {
-                padding: 73px;
+                padding: 50px;
                 transition: all 400ms ease;
-
 
             }
 
             &:hover {
                 transform: translateY(-5%);
-                background-color: rgb(255, 255, 255);
+                background-color: $color-fondo-light;
 
                 H3 {
-                    color: black;
+                    color: $color-fondo-dark;
                 }
             }
         }
@@ -343,8 +355,8 @@
         max-width: 350px;
         height: 350px;
         padding: 50px;
-        border-bottom: solid 3px black;
-        border-top: solid 3px black;
+        border-bottom: solid 3px $color-fondo-light;
+        border-top: solid 3px $color-secundario-dark;
         border-radius: 50%;
         transition: all 1200ms ease;
 
@@ -355,7 +367,7 @@
             img {
                 height: 200px;
                 width: 200px;
-                border: 2px solid red;
+                border: 2px solid $color-secundario-light;
                 position: relative;
                 top: -20px;
 
@@ -366,11 +378,10 @@
 
             font-size: 10px;
             flex-grow: 1;
-            height: 100px;
+            height: 110px;
             width: auto;
-            background-color: rgb(123, 121, 121);
-            color: aliceblue;
-            border: 1px solid rgb(255, 255, 255);
+            background-color: $color-secundario-dark;
+            color: $color-fondo-light;
             border-radius: 10px;
             position: relative;
             top: -80px;
@@ -379,6 +390,7 @@
         }
 
         h1 {
+            color: $color-fondo-light;
             position: relative;
             top: -226px;
             visibility: hidden;
@@ -388,9 +400,9 @@
 
         &:hover {
             h1 {
-                opacity: 2;
+                opacity: 1;
                 visibility: visible;
-                box-shadow: 0px 25px 40px 2px rgba(0, 0, 0, 0.7);
+                box-shadow: rgba(234, 231, 231, 0.45) 0px 25px 20px -20px;
             }
 
             h3 {
@@ -402,7 +414,7 @@
         }
 
         &:hover {
-            background-color: rgba(26, 26, 26, 0.178);
+            background-color: rgba($color-principal, 0.178);
 
             img {
                 border: 2px solid rgb(0, 0, 0);
@@ -427,15 +439,15 @@
 
         a {
 
-            background-color: rgba(255, 255, 255, 0.87);
+            background-color: rgba($color-principal, 0.87);
             display: flex;
             flex-direction: column;
             margin: 20px 30px 10px 40px;
             font-size: 10px;
             flex-grow: 1;
-            color: white;
-            background: #002d72;
-            border: solid #0096c8 2px;
+            color: $color-fondo-light;
+            background: $color-fondo-dark;
+            border: solid $color-fondo-light 2px;
             border-radius: 20px;
 
             img {

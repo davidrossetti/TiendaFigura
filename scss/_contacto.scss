@@ -1,0 +1,43 @@
+#paginaContacto{
+    display: flex;
+    flex-direction: column;
+    
+    
+    .formulario {
+    background: $color-secundario-light;
+    min-height: 50vh;
+    min-width: 60vw;
+    margin: 0px 50px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 150px;
+    align-items: center;
+    border-radius: 15px;
+    h1{
+        color:$color-fondo-light;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    input {
+        text-transform: uppercase;
+        margin: 1%;
+        width: 20vw;
+        text-align: center;
+        border-radius: 20px;
+        border: $color-secundario-dark solid;
+        background: $color-fondo-light;
+        padding:5px;
+    }
+    label{
+        color:$color-fondo-light;   
+        text-transform: uppercase;
+        margin: 20px;
+    }
+    textarea{
+        width:1000px;
+        height:110px;
+        }
+}
+}
