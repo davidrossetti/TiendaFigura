@@ -30,3 +30,27 @@
     
 
 }
+@media (max-width:1500px) {
+    #paginaPreguntasFrec {
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 30px;
+        }
+        ol {
+            margin-bottom: 2%;
+
+            li {
+                font-weight: bold;
+                list-style: none;
+                margin: 2%;
+                font-size: 25px;
+                color: $color-principal;
+                min-width: 17px;                
+            }
+
+            
+        }
+        
+    }
+}

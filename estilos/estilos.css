@@ -1,13 +1,5 @@
 @charset "UTF-8";
 /* CLASES*/
-.tituloSubtitulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #FAF9F8;
-  font-family: "Roboto Slab", "Times New Roman", serif;
-}
-
 #paginaPrincipal h1 {
   font-size: 4em;
   font-weight: 900;
@@ -129,7 +121,7 @@
 }
 
 /* RESPONSIVE MOBILE*/
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   /* RESPONSIVE MOBILE Index BOOTSTRAP */
   #paginaPrincipal {
     --bs-body-bg: $color-fondo-dark;
@@ -148,22 +140,66 @@
     width: 200px;
     height: auto;
   }
+  .imagenSecciones {
+    display: flex;
+    flex-direction: column;
+    background-color: #9EABB5;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .imagenSecciones a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+  }
+  .imagenSecciones a img {
+    min-height: 90px;
+    width: 90px;
+    object-fit: cover;
+    /*Sirve para que no se distorsione la imagen */
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #FAF9F8;
+  }
+  .imagenSecciones a h3 {
+    padding: 20px;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #FAF9F8;
+  }
   /* RESPONSIVE MOBILE Propiedades Index-UltimasNovedades*/
+  .tituloSubtitulo {
+    padding: 20px;
+    display: flex;
+    font-size: 7px;
+    align-items: center;
+  }
   .imagenNovedades {
-    max-width: 200px;
-    height: 150px;
+    display: flex;
+    align-items: center;
+    min-width: 327px;
+    height: 346px;
     padding: 15px;
     border: solid 3px rgb(179, 176, 176);
   }
   .imagenNovedades img {
-    height: 50px;
-    width: 50px;
+    max-height: 190px;
+    width: auto;
     border: 2px solid rgb(0, 0, 0);
   }
   .imagenNovedades a {
-    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 11px;
     flex-grow: 1;
-    height: 140px;
+    height: 20px;
     width: auto;
     background-color: rgb(123, 121, 121);
     color: aliceblue;
@@ -171,11 +207,14 @@
     border-radius: 10px;
     margin-top: 2px;
   }
+  .imagenNovedades h1 {
+    visibility: hidden;
+  }
   /* RESPONSIVE MOBILE Propiedades Index-Proximamente*/
   .imagenProximamente {
     background-color: rgba(253, 14, 14, 0.274);
-    max-width: 200px;
-    height: 200px;
+    max-width: 300px;
+    height: 300px;
     padding: 50px;
     margin-top: 15px;
   }
@@ -207,6 +246,7 @@
     justify-content: center;
     margin-top: 30px;
     gap: 20px;
+    flex-wrap: wrap;
   }
   .buscador input {
     width: 500px;
@@ -237,8 +277,8 @@
     transition: all 400ms ease;
   }
   .imagenSecciones a img {
-    height: 350px;
-    width: 230px;
+    min-height: 320px;
+    width: auto;
     box-shadow: 7px 14px 20px 3px #8895A2;
   }
   .imagenSecciones a H3 {
@@ -343,12 +383,13 @@
 }
 /*Clases figurasArticuladas*/
 #figuraArticulada {
-  background-color: #FAF9F8;
   cursor: default;
+  background-color: #FAF9F8;
 }
 
 .piePagina {
   grid-area: piePagina;
+  display: flex;
 }
 
 .productos {
@@ -357,16 +398,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #002D72;
-}
-
-.encabezado {
-  grid-area: encabezado;
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(rgba(55, 112, 255, 0.2), rgba(85, 133, 255, 0.2)), url(../multimedia/logoShfiguarts.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /*Casilla productos*/
@@ -379,6 +410,7 @@
   width: 800px;
   height: 150px;
   transition: all 400ms ease;
+  border-radius: 50px;
 }
 .casillaGeneralItem:hover {
   background-color: black;
@@ -395,7 +427,8 @@
   justify-content: center;
 }
 .imagenItem img {
-  margin-top: -140px;
+  border-radius: 20px;
+  margin-top: -40px;
   max-width: 200px;
   max-height: auto;
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
@@ -435,6 +468,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 0px 20px;
 }
 
 /* RESPONSIVE MOBILE*/
@@ -445,7 +479,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
-    grid-template-areas: "encabezado" "lista" "productos" "piePagina";
+    grid-template-areas: "lista" "productos" "piePagina";
   }
   .productos {
     display: flex;
@@ -484,10 +518,11 @@
   /*  RESPONSIVE DESKTOP PAGINA FIGURA ARTICULADA */
   #figuraArticulada {
     display: grid;
-    grid-template-columns: 0.7fr 1fr 1.2fr;
-    grid-template-rows: 0.4fr 0.4fr 2.1fr 0.5fr;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 3fr 1fr;
     gap: 0px 0px;
-    grid-template-areas: "encabezado encabezado encabezado" "lista lista lista" "productos productos productos" "piePagina piePagina piePagina";
+    grid-template-areas: "lista lista" "productos productos" "piePagina piePagina";
   }
 }
 #paginaPreguntasFrec {
@@ -516,6 +551,26 @@
   color: #A6B1C3;
 }
 
+@media (max-width: 1500px) {
+  #paginaPreguntasFrec {
+    display: flex;
+    flex-direction: column;
+  }
+  #paginaPreguntasFrec h1 {
+    font-size: 30px;
+  }
+  #paginaPreguntasFrec ol {
+    margin-bottom: 2%;
+  }
+  #paginaPreguntasFrec ol li {
+    font-weight: bold;
+    list-style: none;
+    margin: 2%;
+    font-size: 25px;
+    color: #A6B1C3;
+    min-width: 17px;
+  }
+}
 footer {
   padding: 1%;
   display: flex;
@@ -526,6 +581,7 @@ footer {
   border-radius: 50px;
   position: relative;
   bottom: 0%;
+  background-color: #8895A2;
 }
 footer ul {
   display: flex;
@@ -564,22 +620,17 @@ footer ul li a:hover {
 }
 
 /* RESPONSIVE MOBILE*/
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
   footer {
+    height: auto;
     flex-direction: column;
-    background-color: #002d72;
-    color: #FCFAFB;
-    font-size: large;
     text-align: center;
     list-style: none;
   }
-}
-/* RESPONSIVE DESKTOP*/
-@media (min-width: 769px) {
-  footer {
-    background-color: #8895A2;
-    color: #FAF9F8;
-    gap: 50px;
+  footer ul iframe {
+    border: solid #FAF9F8;
+    max-width: 300px;
+    height: 200px;
   }
 }
 .lista {
@@ -632,22 +683,50 @@ footer ul li a:hover {
   align-items: center;
 }
 
+@media (max-width: 1500px) {
+  .logo {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    background-color: #002D72;
+    padding: 20px;
+    overflow: auto;
+    height: auto;
+    border-radius: 60px;
+  }
+  .lista ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .lista ul li {
+    font-size: 10px;
+    margin-bottom: 15px;
+    border-radius: 60px;
+    border: 2px;
+  }
+}
 #paginaContacto {
   display: flex;
   flex-direction: column;
 }
 #paginaContacto .formulario {
   background: #9EABB5;
-  min-height: 50vh;
-  min-width: 60vw;
-  margin: 0px 50px 50px 0px;
+  margin: 80px 50px 50px 0px;
   display: flex;
   flex-direction: column;
-  padding: 150px;
+  padding: auto;
   align-items: center;
   border-radius: 15px;
 }
 #paginaContacto .formulario h1 {
+  margin: 20px;
   color: #FAF9F8;
   text-transform: uppercase;
   font-weight: bold;
@@ -669,10 +748,81 @@ footer ul li a:hover {
   margin: 20px;
 }
 #paginaContacto .formulario textarea {
-  width: 1000px;
-  height: 110px;
+  width: 500px;
+  height: auto;
 }
 
+@media (max-width: 1500px) {
+  #paginaContacto {
+    display: flex;
+    align-items: center;
+  }
+  #paginaContacto .formulario {
+    margin: auto;
+    background: #002D72;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  #paginaContacto .formulario h1 {
+    font-size: 15px;
+    margin: 20px;
+    color: #FAF9F8;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  #paginaContacto .formulario input {
+    text-transform: uppercase;
+    margin: 1%;
+    width: 50vw;
+    text-align: center;
+    border-radius: 20px;
+    border: #8895A2 solid;
+    background: #FAF9F8;
+    padding: 5px;
+  }
+  #paginaContacto .formulario label {
+    color: #FAF9F8;
+    text-transform: uppercase;
+    margin: 20px;
+  }
+  #paginaContacto .formulario textarea {
+    width: 250px;
+    height: auto;
+  }
+}
+#paginaSobreNosotros {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  padding: 5%;
+  text-align: center;
+  background-color: #FAF9F8;
+  border: 3px solid;
+}
+#paginaSobreNosotros h1 {
+  margin: 20px;
+  font-size: 70px;
+  color: #002D72;
+  text-transform: uppercase;
+}
+#paginaSobreNosotros .bloqueDeTexto {
+  margin: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1500px) {
+  #paginaSobreNosotros .tituloSubtitulo {
+    display: flex;
+    font-size: 25px;
+  }
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -692,7 +842,28 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #FAF9F8;
+  width: auto;
+  padding: auto;
   border-radius: 12px;
+}
+
+.ajusteTexto {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.tituloSubtitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FAF9F8;
+  font-family: "Roboto Slab", "Times New Roman", serif;
 }
 
 /*# sourceMappingURL=estilos.css.map */

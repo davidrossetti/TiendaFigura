@@ -1,0 +1,31 @@
+
+#paginaSobreNosotros{
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    padding: 5%;
+    text-align: center;
+    background-color: $color-fondo-light;
+    border: 3px solid;
+    
+    h1{
+        margin: 20px;
+        font-size: 70px;
+        color: $color-fondo-dark;
+        text-transform: uppercase;
+    }
+
+    .bloqueDeTexto{
+        margin:20px;
+        padding: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width:1500px) {
+    #paginaSobreNosotros{
+        .tituloSubtitulo{
+            display: flex;
+            font-size: 25px;
+        }
+    }
+}

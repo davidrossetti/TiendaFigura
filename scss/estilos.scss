@@ -6,6 +6,7 @@
 @import"footer";
 @import"barraNavegacion";
 @import "contacto";
+@import "nosotros";
 * {
     padding: 0px;
     margin: 0px;
@@ -28,7 +29,27 @@ body{
     flex-direction: column;
     align-items: center;
     background-color:$color-fondo-light;
+    width: auto;
+    padding: auto;
     border-radius: 12px;
+    
+
+}
+.ajusteTexto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    margin: auto;
+    overflow: hidden;
 }
 
-
+.tituloSubtitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-fondo-light;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}

@@ -1,12 +1,13 @@
 /*Clases figurasArticuladas*/
 #figuraArticulada {
-    background-color: $color-fondo-light;
     cursor:default; // evita que cambie el cursor del mouse a texto
-
+    background-color:$color-fondo-light;
+  
 }
 
 .piePagina {
     grid-area: piePagina;
+    display: flex;
 }
 
 .productos {
@@ -15,17 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $color-fondo-dark;
 }
 
-.encabezado {
-    grid-area: encabezado;
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(rgba(55, 112, 255, 0.2), rgba(85, 133, 255, 0.2)), url(../multimedia/logoShfiguarts.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 /*Casilla productos*/
 
@@ -39,6 +31,7 @@
     width: 800px;
     height: 150px;
     transition: all 400ms ease;
+    border-radius: 50px;
 
     &:hover{
         background-color:black;
@@ -56,8 +49,10 @@
     max-height: auto;
     align-items: center;
     justify-content: center;
+    
     img {
-        margin-top:-140px;
+        border-radius: 20px;
+        margin-top:-40px;
         max-width: 200px;
         max-height: auto;
         box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);;
@@ -105,6 +100,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 0px 20px;
+
 }
 
 
@@ -126,7 +123,6 @@
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-template-areas:
-            "encabezado"
             "lista"
             "productos"
             "piePagina";
@@ -187,14 +183,16 @@
 
     #figuraArticulada {
         display: grid;
-        grid-template-columns: 0.7fr 1fr 1.2fr;
-        grid-template-rows: 0.4fr 0.4fr 2.1fr 0.5fr;
+        justify-items: center;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 0.4fr 3fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
-            "encabezado encabezado encabezado"
-            "lista lista lista"
-            "productos productos productos"
-            "piePagina piePagina piePagina";
+            "lista lista"
+            "productos productos"
+            "piePagina piePagina";
+
+          
     }
 
     
