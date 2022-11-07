@@ -4,6 +4,10 @@
     background-color:$color-fondo-light;
   
 }
+.lista{
+    grid-area: lista;
+    display: flex;
+}
 
 .piePagina {
     grid-area: piePagina;
@@ -12,6 +16,8 @@
 
 .productos {
     grid-area: productos;
+    padding: 80px;
+    margin: 80px;
     gap: 50px;
     display: flex;
     flex-direction: column;
@@ -26,8 +32,7 @@
     display: flex;
     justify-content: space-between;
     background-color: $color-principal;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 30px;
     width: 800px;
     height: 150px;
     transition: all 400ms ease;
@@ -35,7 +40,7 @@
 
     &:hover{
         background-color:black;
-        width: 900px;
+        width: 1200px;
         height: 160px;
     }
 }
@@ -108,24 +113,27 @@
 
 
 /* RESPONSIVE MOBILE*/
-@media (max-width:768px) {
-
-
-
-
+@media (max-width:1500px) {
 
     /*  RESPONSIVE MOBILE PAGINA FIGURA ARTICULADA */
 
     #figuraArticulada {
-
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
+        justify-content:space-evenly;
+        justify-items:center;        
+        grid-template-columns: auto;
+        grid-template-rows: auto  auto auto;
+        gap: 10px 10px 10px;
         grid-template-areas:
             "lista"
             "productos"
             "piePagina";
+    }
+    .lista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
     }
 
     .productos {
@@ -135,31 +143,37 @@
     }
 
     .casillaGeneralItem {
-        width: 400px;
+        display: flex;
+        align-items: center;
+        width: 250px;
         height: auto;
+        pointer-events: none;
     }
 
     .productoNombre {
-        font-size: 8px;
-        text-align: center;
+        padding: 2px;
+        font-size: 10px;
+        text-align: unset;
     }
 
     .productoPrecio {
         margin-top: 8px;
-        font-size: 10px;
+        font-size: 15px;
+        
     }
 
     .estadoYconsulta {
-        font-size: 15px;
+        font-size: 14px;
+        padding: 10px;
     }
 
     .imagenItem {
 
-        height: 100px;
-        width: 80px;
+        height: 80px;
+        width: 60px;
         img {
 
-            height: 80px;
+            height: 50px;
             width: auto;
             align-items: center;
             justify-content: center;
@@ -173,29 +187,3 @@
 
 }
 
-
-/* RESPONSIVE DESKTOP*/
-@media (min-width:769px) {
-
-
-
-    /*  RESPONSIVE DESKTOP PAGINA FIGURA ARTICULADA */
-
-    #figuraArticulada {
-        display: grid;
-        justify-items: center;
-        grid-template-columns:1fr 1fr;
-        grid-template-rows: 0.4fr 3fr 1fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "lista lista"
-            "productos productos"
-            "piePagina piePagina";
-
-          
-    }
-
-    
-
-
-}

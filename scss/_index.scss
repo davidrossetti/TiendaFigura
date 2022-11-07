@@ -171,7 +171,7 @@
 
     /* RESPONSIVE MOBILE Index BOOTSTRAP */
     #paginaPrincipal {
-        --bs-body-bg: $color-fondo-dark;
+        --bs-body-bg: rgba(114, 114, 129, 0.878) !important;
         border: 30px solid $color-fondo-light;
         margin: auto;
 
@@ -327,7 +327,6 @@
 
     #paginaPrincipal section {
         /*Se usa ID para central todos los elementos SOLO en la pagina principal*/
-
         display: flex; 
         justify-content: center;
         margin-top: 30px;
