@@ -30,7 +30,7 @@
         li {
             transition: all 1000ms ease;
 
-            font-size: 30px;
+            font-size: 20px;
             text-align: center;
             border: 2px solid $color-secundario-dark;
             margin: auto;
@@ -55,7 +55,7 @@
         display: flex;
         align-items: center;
 }
-@media (max-width:1500px) {
+@media (max-width:900px) {
     .logo{
         font-size: 20px;
         display: flex;

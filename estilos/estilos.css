@@ -478,7 +478,7 @@
 }
 
 /* RESPONSIVE MOBILE*/
-@media (max-width: 1500px) {
+@media (max-width: 900px) {
   /*  RESPONSIVE MOBILE PAGINA FIGURA ARTICULADA */
   #figuraArticulada {
     display: grid;
@@ -557,7 +557,7 @@
   color: #A6B1C3;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 900px) {
   #paginaPreguntasFrec {
     display: flex;
     flex-direction: column;
@@ -597,6 +597,8 @@ footer ul {
 }
 footer ul iframe {
   border: solid #FAF9F8;
+  width: 200px;
+  height: 120px;
 }
 footer ul h3 {
   padding: 10px;
@@ -626,7 +628,7 @@ footer ul li a:hover {
 }
 
 /* RESPONSIVE MOBILE*/
-@media (max-width: 1500px) {
+@media (max-width: 1300px) {
   footer {
     height: auto;
     flex-direction: column;
@@ -666,7 +668,7 @@ footer ul li a:hover {
 }
 .lista ul li {
   transition: all 1000ms ease;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   border: 2px solid #8895A2;
   margin: auto;
@@ -689,7 +691,7 @@ footer ul li a:hover {
   align-items: center;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 900px) {
   .logo {
     font-size: 20px;
     display: flex;
@@ -758,7 +760,7 @@ footer ul li a:hover {
   height: auto;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 900px) {
   #paginaContacto {
     display: flex;
     align-items: center;
@@ -823,7 +825,7 @@ footer ul li a:hover {
   margin-bottom: 40px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 900px) {
   #paginaSobreNosotros .tituloSubtitulo {
     display: flex;
     font-size: 25px;

@@ -16,10 +16,11 @@ footer {
         padding: 10px;      
         iframe{
             border: solid $color-fondo-light;
+            width: 200px;
+            height:120px;
         }
         h3{
             padding: 10px;      
-
             margin-bottom: 30px;
         }
         li {
@@ -50,7 +51,7 @@ footer {
 }
 
 /* RESPONSIVE MOBILE*/
-@media (max-width:1500px) {
+@media (max-width:1300px) {
     footer {
         height:auto;
         flex-direction: column;
