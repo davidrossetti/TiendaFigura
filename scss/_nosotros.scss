@@ -1,3 +1,16 @@
+.modo-claro{
+    background-color: $color-fondo-light;
+}
+
+.modo-oscuro{
+    background-color: black !important;
+    color: white;
+}
+
+#claro-oscuro{
+    color: white;
+}
+
 
 #paginaSobreNosotros{
     display: flex;

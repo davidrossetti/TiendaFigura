@@ -7,8 +7,13 @@
     <meta name="description" content="Contacto para consultas de prductos">
     <meta name="keywords" content="sh figuarts,bandai,banpresto,Argentina,square enix merchandising, envios">
     <link rel="stylesheet" href="../estilos/estilos.css">
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  
     <title>Contacto</title>
+    
 </head>
 <body id="paginaContacto">
 
@@ -21,17 +26,45 @@
             <li> <a href="Merchandising.html">MERCHANDISING</a></li>
         </ul>
     </header>
+
+ <!-- Slider main container -->
+ <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="../multimedia/BANNER SHFIGUARTS.png" alt="" srcset=""></div>
+      <div class="swiper-slide"><img src="../multimedia/bannerFinalFantasyBox.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img src="../multimedia/logoShfiguarts.jpg" alt="" srcset=""></div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
     <main>
-        <form class="formulario">
+        <form id="formulario">
             <h1>Reserva/consulta de productos</h1>
-            <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
-            <input type="email" id="email" name="email" required placeholder="Mail">
-            <input type="telefono" id="telefono" name="telefono" placeholder="Telefono/Whatsapp">
+            <label>
+                <input type="text" placeholder="Nombre" id="input-usuario">
+            </label>
+            <label>
+                <input type="text" placeholder="Mail" id="input-mail">
+            </label>
+            <label>
+                <input type="text"  placeholder="Telefono/Whatsapp" id="input-telefono">
+            </label>
             <label for="comentario"><h2>Comentario</h2></label>
-            <textarea name="comentario" id="comentario" cols="50" rows="20"></textarea>
+            <textarea name="comentario" placeholder="Maximo 150 caracteres" id="input-comentario" cols="50" rows="20"></textarea>
             <input type="submit" value="enviar">
         </form>
-
+      
 
     </main>
     <footer>
@@ -78,5 +111,8 @@
 
  
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../carrusel.js"></script>
+    <script src="../formulario.js"></script>
 </body>
 </html>

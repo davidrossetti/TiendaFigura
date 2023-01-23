@@ -1,3 +1,5 @@
+
+
 .lista {
     
     background-color:$color-fondo-dark;
@@ -9,8 +11,7 @@
     display:flex;
     justify-content: space-between;
     transition: all 1200ms ease;
-    
-
+   
     ul {
         display: flex;
         flex-direction:row;
@@ -87,3 +88,4 @@
 
     }
 }
+

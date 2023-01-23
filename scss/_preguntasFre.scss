@@ -1,56 +1,57 @@
 @import "variables";
 
-#paginaPreguntasFrec{
-    display: flex;
-    flex-direction: column;
-    font-size: larger;
-    padding: 5%;
-    text-align: center;
-    background-color: $color-fondo-light;
-    border: 3px solid;
+// #paginaPreguntasFrec{
+//     display: flex;
+//     flex-direction: column;
+//     font-size: larger;
+//     padding: 5%;
+//     text-align: center;
+//     background-color: $color-fondo-light;
+//     border: 3px solid;
     
-    h1{
-        margin: 20px;
-        font-size: 70px;
-        color: $color-secundario-dark;
-        text-transform: uppercase;
-    }
+//     h1{
+//         margin: 20px;
+//         font-size: 70px;
+//         color: $color-secundario-dark;
+//         text-transform: uppercase;
+//     }
     
-    ol{
-        margin-bottom: 2%;
-        li{
-        font-weight: bold;
-        list-style: none;
-        margin: 2%;
-        font-size: 3rem;
-                color: $color-principal;
-        }
+//     ol{
+//         margin-bottom: 2%;
+//         li{
+//         font-weight: bold;
+//         list-style: none;
+//         margin: 2%;
+//         font-size: 3rem;
+//                 color: $color-principal;
+//         }
         
-    }
+//     }
     
 
-}
-@media (max-width:900px) {
-    #paginaPreguntasFrec {
-        display: flex;
-        flex-direction: column;
-        h1{
-            font-size: 30px;
-        }
-        ol {
-            margin-bottom: 2%;
+// }
+// @media (max-width:900px) {
+//     #paginaPreguntasFrec {
+//         display: flex;
+//         flex-direction: column;
+//         h1{
+//             font-size: 30px;
+//         }
+//         ol {
+//             margin-bottom: 2%;
 
-            li {
-                font-weight: bold;
-                list-style: none;
-                margin: 2%;
-                font-size: 25px;
-                color: $color-principal;
-                min-width: 17px;                
-            }
+//             li {
+//                 font-weight: bold;
+//                 list-style: none;
+//                 margin: 2%;
+//                 font-size: 25px;
+//                 color: $color-principal;
+//                 min-width: 17px;                
+//             }
 
             
-        }
+//         }
         
-    }
-}
+//     }
+// }
+

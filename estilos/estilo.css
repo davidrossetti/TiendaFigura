@@ -381,52 +381,6 @@
     /* Sirve para que no se distorsione la imagen */
   }
 }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /*Clases figurasArticuladas*/
 #figuraArticulada {
   cursor: default;
@@ -577,6 +531,52 @@ body {
     object-fit: cover;
   }
 }
+#paginaPreguntasFrec {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  padding: 5%;
+  text-align: center;
+  background-color: #FAF9F8;
+  border: 3px solid;
+}
+#paginaPreguntasFrec h1 {
+  margin: 20px;
+  font-size: 70px;
+  color: #8895A2;
+  text-transform: uppercase;
+}
+#paginaPreguntasFrec ol {
+  margin-bottom: 2%;
+}
+#paginaPreguntasFrec ol li {
+  font-weight: bold;
+  list-style: none;
+  margin: 2%;
+  font-size: 3rem;
+  color: #A6B1C3;
+}
+
+@media (max-width: 900px) {
+  #paginaPreguntasFrec {
+    display: flex;
+    flex-direction: column;
+  }
+  #paginaPreguntasFrec h1 {
+    font-size: 30px;
+  }
+  #paginaPreguntasFrec ol {
+    margin-bottom: 2%;
+  }
+  #paginaPreguntasFrec ol li {
+    font-weight: bold;
+    list-style: none;
+    margin: 2%;
+    font-size: 25px;
+    color: #A6B1C3;
+    min-width: 17px;
+  }
+}
 footer {
   padding: 1%;
   display: flex;
@@ -724,33 +724,23 @@ footer ul li a:hover {
   display: flex;
   flex-direction: column;
 }
-#paginaContacto .swiper {
-  width: 100%;
-  height: 100px;
-  margin-bottom: 30px;
-}
-#paginaContacto .swiper img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-#paginaContacto #formulario {
+#paginaContacto .formulario {
   background: #9EABB5;
-  margin-bottom: 20px;
+  margin: 80px 50px 50px 0px;
   display: flex;
   flex-direction: column;
   padding: auto;
   align-items: center;
   border-radius: 15px;
 }
-#paginaContacto #formulario h1 {
+#paginaContacto .formulario h1 {
   margin: 20px;
   color: #FAF9F8;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 15px;
 }
-#paginaContacto #formulario input {
+#paginaContacto .formulario input {
   text-transform: uppercase;
   margin: 1%;
   width: 20vw;
@@ -760,19 +750,14 @@ footer ul li a:hover {
   background: #FAF9F8;
   padding: 5px;
 }
-#paginaContacto #formulario label {
+#paginaContacto .formulario label {
   color: #FAF9F8;
   text-transform: uppercase;
   margin: 20px;
 }
-#paginaContacto #formulario textarea {
+#paginaContacto .formulario textarea {
   width: 500px;
   height: auto;
-}
-#paginaContacto .swiper {
-  margin-top: 100px;
-  width: 700px;
-  height: 500px;
 }
 
 @media (max-width: 900px) {
@@ -780,7 +765,7 @@ footer ul li a:hover {
     display: flex;
     align-items: center;
   }
-  #paginaContacto #formulario {
+  #paginaContacto .formulario {
     margin: auto;
     background: #002D72;
     display: flex;
@@ -791,7 +776,7 @@ footer ul li a:hover {
     margin-bottom: 30px;
     margin-top: 30px;
   }
-  #paginaContacto #formulario h1 {
+  #paginaContacto .formulario h1 {
     font-size: 15px;
     margin: 20px;
     color: #FAF9F8;
@@ -799,7 +784,7 @@ footer ul li a:hover {
     font-weight: bold;
     margin-bottom: 15px;
   }
-  #paginaContacto #formulario input {
+  #paginaContacto .formulario input {
     text-transform: uppercase;
     margin: 1%;
     width: 50vw;
@@ -809,26 +794,22 @@ footer ul li a:hover {
     background: #FAF9F8;
     padding: 5px;
   }
-  #paginaContacto #formulario label {
+  #paginaContacto .formulario label {
     color: #FAF9F8;
     text-transform: uppercase;
     margin: 20px;
   }
-  #paginaContacto #formulario textarea {
+  #paginaContacto .formulario textarea {
     width: 250px;
     height: auto;
   }
 }
 .modo-claro {
-  background-color: #FAF9F8;
+  background-color: rgb(237, 237, 43);
 }
 
 .modo-oscuro {
-  background-color: black !important;
-  color: white;
-}
-
-#claro-oscuro {
+  background-color: black;
   color: white;
 }
 
@@ -902,4 +883,4 @@ body {
   font-family: "Roboto Slab", "Times New Roman", serif;
 }
 
-/*# sourceMappingURL=estilos.css.map */
+/*# sourceMappingURL=estilo.css.map */
